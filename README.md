@@ -1,13 +1,13 @@
 # notas-atletas
 # GINÁSTICA ARTÍSTICA - CLASSIFICAÇÃO
 
-O projeto de exibição das classificações da Ginástica Artística, foi desenvolvido com base na solicitação da Equipe Organizadora do Evento. Onde os dados foram fornecidos pela pela mesma, contendo também as notas de cada um.
+O projeto de exibição das classificações da Ginástica Artística, foi desenvolvido com base na solicitação da Equipe Organizadora do Evento. Onde os dados foram fornecidos pela mesma, contendo também as notas de cada um.
 
 # ESTRUTURA DO PROJETO
 
 O projeto é comsposto por três arquivos principais:
 
-index.html: Estrutura da página web com botôes que mostram os resultados;
+index.html: Estrutura da página web com botões que mostram os resultados;
 
 estilo.css: Estilização da página, com cores e layout responsivo;
 
