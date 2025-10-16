@@ -26,17 +26,16 @@ class Classificacao {
   }
   calculaMedia() {
       let notasOrdenadas = this.notas.slice().sort((a, b) => a - b);
-      console.log(notasOrdenadas);
       let soma = notasOrdenadas.slice(1, 4).reduce(function(acc, atual){
         return acc + atual;
     }, 0);
-    let media = soma / this.notas.slice(1, 4).length;
-    return media.toFixed(5);
+    let media = soma /  notasOrdenadas.slice(1, 4).length;
+    return media.toFixed(2);
   }
   converteParaString() {
     return `
     <p><strong>Atleta:</strong> ${this.atleta}</p> 
-    <p><strong>Notas Obtidas:</strong> ${this.notas}</p>
+    <p><strong>Notas Obtidas:</strong> ${this.notas.slice().sort((a, b) => a - b)}</p>
     <p><strong>Média Válida:</strong> ${this.media}</P>
     `;
   }
@@ -50,19 +49,19 @@ let atleta4 = new Classificacao(atletas[3].nome, atletas[3].notas);
 
 
 function exibirResultado1() {
-  document.getElementById("resultado").innerHTML = `${atleta1.string}`;;
+  document.getElementById("resultado").innerHTML = `${atleta1.string}`;
   return document.getElementById("resultado").innerHTML;
 }
 function exibirResultado2() {
-  document.getElementById("resultado").innerHTML = `${atleta2.string}`;;
+  document.getElementById("resultado").innerHTML = `${atleta2.string}`;
   return document.getElementById("resultado").innerHTML;
 }
 function exibirResultado3() {
-  document.getElementById("resultado").innerHTML = `${atleta3.string}`;;
+  document.getElementById("resultado").innerHTML = `${atleta3.string}`;
   return document.getElementById("resultado").innerHTML;
 }
 function exibirResultado4() {
-  document.getElementById("resultado").innerHTML = `${atleta4.string}`;;
+  document.getElementById("resultado").innerHTML = `${atleta4.string}`;
   return document.getElementById("resultado").innerHTML;
 }
 
