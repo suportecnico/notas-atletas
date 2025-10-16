@@ -16,7 +16,7 @@ ginastica.js: Lógica que recebe as notas e faz o cálculo das médias, interpol
 # LÓGICA DE CLASSIFICAÇÃO 
 
 Cada atleta recebe cinco notas, de 1 a 10; 
-A média é calculada com base nas três notas do meio, descosiderando a primeira e a última:
+A média é calculada com base nas três notas do meio, desconsiderando a maior e menor nota:
 
 Exemplo:
 

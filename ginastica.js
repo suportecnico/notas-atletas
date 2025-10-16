@@ -25,7 +25,9 @@ class Classificacao {
     this.string = this.converteParaString();
   }
   calculaMedia() {
-      let soma = this.notas.slice(1, 4).reduce(function(acc, atual){
+      let notasOrdenadas = this.notas.slice().sort((a, b) => a - b);
+      console.log(notasOrdenadas);
+      let soma = notasOrdenadas.slice(1, 4).reduce(function(acc, atual){
         return acc + atual;
     }, 0);
     let media = soma / this.notas.slice(1, 4).length;
@@ -46,7 +48,6 @@ let atleta2 = new Classificacao(atletas[1].nome, atletas[1].notas);
 let atleta3 = new Classificacao(atletas[2].nome, atletas[2].notas);
 let atleta4 = new Classificacao(atletas[3].nome, atletas[3].notas);
 
-console.log(atleta1.string);
 
 function exibirResultado1() {
   document.getElementById("resultado").innerHTML = `${atleta1.string}`;;
@@ -65,3 +66,4 @@ function exibirResultado4() {
   return document.getElementById("resultado").innerHTML;
 }
 
+console.log(atleta1.string);
